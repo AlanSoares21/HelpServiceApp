@@ -22,7 +22,10 @@ export default {
     },
 
     button : {
-        marginBottom:10,
-        width: 100
+        height:'100%',
+        borderWidth:2.5,
+        borderColor: '#FD7575',
+        justifyContent:'center',
+        padding:10,
     }
 }

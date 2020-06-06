@@ -23,13 +23,13 @@ export default function Login(props) {
 
           <View style={{width:'70%', marginBottom:10}}>
             <Button color={'#F14141'} title={'Logar'} style={estilo.button} onPress={()=>{ 
-                props.navigation.navigate('Feed', { estilo: estilo })
+                props.navigation.navigate('Feed')
             }}></Button>
           </View>
             
           <View style={{width:'70%'}}>
             <Button color={'#F14141'} title={'Cadastrar'} onPress={()=>{ 
-                props.navigation.navigate('Cadastrar', { estilo: estilo })
+                props.navigation.navigate('Cadastro')
             }}></Button>
           </View>
       
