@@ -5,7 +5,7 @@ A principio, serão produzidas somente as telas do aplicativo sem implementaçã
 
 O App foi construido com o auxilio da biblioteca ReactNative.
 
-Sintase a vontade para utilizar as telas como template :)
+Fique a vontade para utilizar as telas como template :)
 
 Listagem de telas desenvolvidas
 <ul>
