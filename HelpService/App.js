@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -19,10 +19,13 @@ import Feed from './telas/Feed/';
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-        headerStyle:{backgroundColor:'#FF7171',height:70},
-        headerTitle: props => <Text></Text>
-      }} initialRouteName="Login">
+      <Stack.Navigator 
+        screenOptions={{
+          headerStyle:{backgroundColor:'#FF7171',height:70},
+          headerTitle: props => <Text></Text>
+        }} 
+        initialRouteName="Login"
+      >
         <Stack.Screen
           name="Login"
           component={Login}
@@ -53,18 +56,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = {
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputs : {
-    padding:10,
-    height:10,
-    width: 50,
-    borderRadius:10,
-  },
-};
