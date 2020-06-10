@@ -6,6 +6,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
+//Logo do header
+// import LogoHeader from './Componentes/LogoHeader';
+
 // components
 import Login from './telas/Login/';
 import Cadastro from './telas/Cadastro/';
@@ -16,10 +19,14 @@ import Feed from './telas/Feed/';
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{
+        headerStyle:{backgroundColor:'#FF7171',height:70},
+        headerTitle: props => <Text></Text>
+      }} initialRouteName="Login">
         <Stack.Screen
           name="Login"
           component={Login}
+          options={{title:'Login'}}
         />
         <Stack.Screen 
           name="Cadastro" 

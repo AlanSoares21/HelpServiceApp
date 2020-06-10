@@ -29,7 +29,7 @@ export default function Login(props) {
             
           <View style={{width:'70%'}}>
             <Button color={'#F14141'} title={'Cadastrar'} onPress={()=>{ 
-                props.navigation.navigate('Cadastro')
+                props.navigation.navigate('Cadastro',{title:'Cad'})
             }}></Button>
           </View>
       

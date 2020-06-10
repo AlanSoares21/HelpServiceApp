@@ -55,7 +55,7 @@ export default function Profile(props) {
   return (
     <View style={estilo.container,{backgroundColor:'#FFB9B9'}}>
         
-        <ScrollView style={{height:'85%',padding:10,}}>
+        <ScrollView style={estilo.scroll}>
           <View style={{backgroundColor:'#F8F2F2',alignItems:'center',marginBottom:10,padding:10,borderRadius:8}}>
             <Image style={{width: 156,height: 152,}} source={userData.img? userData.img : userDefaultImg} />
             <Text>{userData.name?userData.name:'Sem nome'}</Text>
@@ -70,13 +70,13 @@ export default function Profile(props) {
         
         <View style={{width:'100%',height:'15%',backgroundColor:'#FF7171',flexWrap:'wrap',alignContent:'stretch'}}>
 
-          <View {...estilo.button}>
+          <View style={estilo.button}>
             <Text style={{fontSize:18}} onPress={()=>{ 
               props.navigation.navigate('Feed')
             }}> Feed </Text>
           </View>
 
-          <View {...estilo.button}>
+          <View style={estilo.button}>
             <Text style={{fontSize:18}}  onPress={()=>{ 
               setEditando(!editando);
             }}> {editando? 'Salvar':'Editar'} </Text>
