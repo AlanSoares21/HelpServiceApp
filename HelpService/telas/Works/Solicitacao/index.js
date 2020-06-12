@@ -1,24 +1,16 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 
-export default function Solicitacao({img, nome, endereco}) {
-  if(img && nome && endereco){
+export default function Solicitacao({item,img,index}) {
+    
     return (
-      <View style={{backgroundColor:"#FFFFFF",padding:10,flexDirection:'row'}}>
-        <Text>OLa Solicitacao</Text>
-        <Image source={{img}} />
+      <View key={item.key} style={{marginBottom:10,backgroundColor:"#FFFFFF",padding:10,flexDirection:'row'}}>
+        <Image source={img} style={{width:'25%',height:50}} />
         <View style={{width:'70%',}}>
-          <Text>{nome}</Text>
-          <Text>{endereco}</Text>
+          <Text>{item.nome}</Text>
+          <Text>{item.endereco.rua?item.endereco.rua:'nao'}</Text>
         </View>
       </View>
     );
-  }else{
-    return (
-      <View>
-        <Text>Falta imformacao</Text>
-      </View>
-    );
-  }
   
 }

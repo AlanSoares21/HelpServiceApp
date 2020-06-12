@@ -8,8 +8,8 @@ import Worker from './Worker';
 export default function Works(props) {
   
   return (
-    <View>
+    
       <Worker estilo={estilo}/>
-    </View>
+    
   );
 }
